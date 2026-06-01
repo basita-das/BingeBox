@@ -29,7 +29,7 @@ BingeBox is a movie discovery web app with login protection, TMDB-powered browse
 
 ## Screenshots
 
-Add your screenshots under `docs/screenshots/` and replace the placeholders below.
+Add your screenshots under `docs/` and replace the placeholders below.
 
 ### Login page
 
@@ -37,10 +37,10 @@ Animated **BingeBox** marquee on the background and neo-brutalism login form.
 
 <!-- Replace with your screenshot -->
 
-![Login page](./docs/screenshots/login.png)
+![Login page](./docs/login.png)
 
 <!--
-  To add: save as docs/screenshots/login.png
+  To add: save as docs/login.png
   Alt text: BingeBox login screen with animated background
 -->
 
@@ -50,10 +50,10 @@ Browse popular movies from TMDB in a responsive grid.
 
 <!-- Replace with your screenshot -->
 
-![Home page](./docs/screenshots/home.png)
+![Home page](./docs/home.png)
 
 <!--
-  To add: save as docs/screenshots/home.png
+  To add: save as docs/home.png
 -->
 
 ### Search results
@@ -62,10 +62,10 @@ Search movies by title and view matching results.
 
 <!-- Replace with your screenshot -->
 
-![Search results](./docs/screenshots/search.png)
+![Search results](./docs/search.png)
 
 <!--
-  To add: save as docs/screenshots/search.png
+  To add: save as docs/search.png
 -->
 
 ### Movie details modal
@@ -327,13 +327,13 @@ Run from the **project root** (`login-page/`):
 
 ## Troubleshooting
 
-| Issue                                   | Solution                                                          |
-| --------------------------------------- | ----------------------------------------------------------------- |
-| `Missing required environment variable` | Copy `.env.example` to `.env` and fill all required values        |
-| Blank movie posters                     | Some TMDB entries have no poster; a placeholder is shown          |
-| Movies not loading                      | Check API key, network, and TMDB rate limits                      |
-| Login fails                             | Verify `VITE_DEMO_USERNAME` and `VITE_DEMO_PASSWORD` in `.env`    |
-| Screenshots broken in README            | Ensure files exist under `docs/screenshots/` with exact filenames |
+| Issue                                   | Solution                                                       |
+| --------------------------------------- | -------------------------------------------------------------- |
+| `Missing required environment variable` | Copy `.env.example` to `.env` and fill all required values     |
+| Blank movie posters                     | Some TMDB entries have no poster; a placeholder is shown       |
+| Movies not loading                      | Check API key, network, and TMDB rate limits                   |
+| Login fails                             | Verify `VITE_DEMO_USERNAME` and `VITE_DEMO_PASSWORD` in `.env` |
+| Screenshots broken in README            | Ensure files exist under `docs/` with exact filenames          |
 
 ---
 
