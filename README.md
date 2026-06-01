@@ -77,7 +77,7 @@ Click any movie card to open full TMDB details (overview, cast, ratings, budget,
 ![Movie details modal](./docs/details.png)
 
 <!--
-  To add: save as docs/movie-details.png
+  To add: save as docs/details.png
 -->
 
 ### Favorites page
@@ -273,7 +273,7 @@ Use the credentials from your `.env` file after starting the dev server.
 | `login.png`           | Login page            |
 | `home.png`            | Home / popular movies |
 | `search.png`          | Search results        |
-| `movie-details.png`   | Movie detail modal    |
+| `details.png`         | Movie detail modal    |
 | `favorites.png`       | Favorites with items  |
 | `favorites-empty.png` | Empty favorites state |
 
