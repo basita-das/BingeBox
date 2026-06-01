@@ -74,7 +74,7 @@ Click any movie card to open full TMDB details (overview, cast, ratings, budget,
 
 <!-- Replace with your screenshot -->
 
-![Movie details modal](./docs/movie-details.png)
+![Movie details modal](./docs/details.png)
 
 <!--
   To add: save as docs/movie-details.png
