@@ -38,6 +38,7 @@ Add your screenshots under `docs/screenshots/` and replace the placeholders belo
 Animated **BingeBox** marquee on the background and neo-brutalism login form.
 
 <!-- Replace with your screenshot -->
+
 ![Login page](./docs/screenshots/login.png)
 
 <!--
@@ -50,6 +51,7 @@ Animated **BingeBox** marquee on the background and neo-brutalism login form.
 Browse popular movies from TMDB in a responsive grid.
 
 <!-- Replace with your screenshot -->
+
 ![Home page](./docs/screenshots/home.png)
 
 <!--
@@ -61,6 +63,7 @@ Browse popular movies from TMDB in a responsive grid.
 Search movies by title and view matching results.
 
 <!-- Replace with your screenshot -->
+
 ![Search results](./docs/screenshots/search.png)
 
 <!--
@@ -72,10 +75,11 @@ Search movies by title and view matching results.
 Click any movie card to open full TMDB details (overview, cast, ratings, budget, and more).
 
 <!-- Replace with your screenshot -->
-![Movie details modal](./docs/screenshots/movie-details.png)
+
+![Movie details modal](./docs/movie-details.png)
 
 <!--
-  To add: save as docs/screenshots/movie-details.png
+  To add: save as docs/movie-details.png
 -->
 
 ### Favorites page
@@ -83,10 +87,11 @@ Click any movie card to open full TMDB details (overview, cast, ratings, budget,
 Movies saved to favorites (persisted in `localStorage`).
 
 <!-- Replace with your screenshot -->
-![Favorites page](./docs/screenshots/favorites.png)
+
+![Favorites page](./docs/favorites.png)
 
 <!--
-  To add: save as docs/screenshots/favorites.png
+  To add: save as docs/favorites.png
 -->
 
 ### Empty favorites state
@@ -94,38 +99,39 @@ Movies saved to favorites (persisted in `localStorage`).
 Shown when no movies have been favorited yet.
 
 <!-- Replace with your screenshot -->
-![Empty favorites](./docs/screenshots/favorites-empty.png)
+
+![Empty favorites](./docs/favorites-empty.png)
 
 <!--
-  To add: save as docs/screenshots/favorites-empty.png
+  To add: save as docs/favorites-empty.png
 -->
 
 ---
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| **Authentication** | Demo login gate; protected `/movies` routes |
-| **Animated login** | “BingeBox” text scrolls left-to-right on the login background |
-| **Popular movies** | Loads trending/popular titles from TMDB on the home page |
-| **Search** | Find movies by title via TMDB search API |
-| **Movie details** | Click a card to open a modal with full movie info (cast, budget, overview, etc.) |
-| **Favorites** | Add/remove favorites; stored in browser `localStorage` |
-| **Neo-brutalism UI** | Shared design tokens, bold typography, offset shadows |
-| **Monorepo layout** | `frontend/` (React) + `backend/` (API module) with npm workspaces |
+| Feature              | Description                                                                      |
+| -------------------- | -------------------------------------------------------------------------------- |
+| **Authentication**   | Demo login gate; protected `/movies` routes                                      |
+| **Animated login**   | “BingeBox” text scrolls left-to-right on the login background                    |
+| **Popular movies**   | Loads trending/popular titles from TMDB on the home page                         |
+| **Search**           | Find movies by title via TMDB search API                                         |
+| **Movie details**    | Click a card to open a modal with full movie info (cast, budget, overview, etc.) |
+| **Favorites**        | Add/remove favorites; stored in browser `localStorage`                           |
+| **Neo-brutalism UI** | Shared design tokens, bold typography, offset shadows                            |
+| **Monorepo layout**  | `frontend/` (React) + `backend/` (API module) with npm workspaces                |
 
 ---
 
 ## Tech stack
 
-| Layer | Technologies |
-|-------|----------------|
-| **Frontend** | React 19, React Router 7, Vite 6 |
-| **Styling** | Plain CSS (neo-brutalism tokens in `frontend/src/index.css`) |
-| **Data** | [The Movie Database (TMDB)](https://www.themoviedb.org/) REST API |
-| **Backend module** | ES modules (`fetch`), imported by Vite via `@backend` alias |
-| **Tooling** | ESLint, npm workspaces |
+| Layer              | Technologies                                                      |
+| ------------------ | ----------------------------------------------------------------- |
+| **Frontend**       | React 19, React Router 7, Vite 6                                  |
+| **Styling**        | Plain CSS (neo-brutalism tokens in `frontend/src/index.css`)      |
+| **Data**           | [The Movie Database (TMDB)](https://www.themoviedb.org/) REST API |
+| **Backend module** | ES modules (`fetch`), imported by Vite via `@backend` alias       |
+| **Tooling**        | ESLint, npm workspaces                                            |
 
 ---
 
@@ -216,12 +222,12 @@ Before you begin, ensure you have:
 
 All variables live in the **project root** `.env` file. Vite loads them from `login-page/` (see `envDir` in `frontend/vite.config.js`).
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `VITE_TMDB_API_KEY` | Yes | Your TMDB API key |
-| `VITE_TMDB_BASE_URL` | No | TMDB API base URL (default: `https://api.themoviedb.org/3`) |
-| `VITE_DEMO_USERNAME` | Yes | Demo login username |
-| `VITE_DEMO_PASSWORD` | Yes | Demo login password |
+| Variable             | Required | Description                                                 |
+| -------------------- | -------- | ----------------------------------------------------------- |
+| `VITE_TMDB_API_KEY`  | Yes      | Your TMDB API key                                           |
+| `VITE_TMDB_BASE_URL` | No       | TMDB API base URL (default: `https://api.themoviedb.org/3`) |
+| `VITE_DEMO_USERNAME` | Yes      | Demo login username                                         |
+| `VITE_DEMO_PASSWORD` | Yes      | Demo login password                                         |
 
 **Example `.env`:**
 
@@ -234,11 +240,11 @@ VITE_DEMO_PASSWORD=your_password
 
 **Where they are used:**
 
-| File | Purpose |
-|------|---------|
-| `backend/src/config/env.js` | Validates and exports env values |
-| `backend/src/services/api.js` | TMDB requests |
-| `frontend/src/App.jsx` | Demo login check |
+| File                          | Purpose                          |
+| ----------------------------- | -------------------------------- |
+| `backend/src/config/env.js`   | Validates and exports env values |
+| `backend/src/services/api.js` | TMDB requests                    |
+| `frontend/src/App.jsx`        | Demo login check                 |
 
 > Never commit `.env`. Only commit `.env.example`.
 
@@ -261,27 +267,27 @@ Use the credentials from your `.env` file after starting the dev server.
 ### Adding README screenshots
 
 1. Capture screenshots while the app is running (`npm run dev`).
-2. Save them in `docs/screenshots/` using the filenames listed in [Screenshots](#screenshots).
+2. Save them in `docs/` using the filenames listed in [Screenshots](#screenshots).
 3. Commit the images; the README will render them on GitHub.
 
-| Filename | Screen |
-|----------|--------|
-| `login.png` | Login page |
-| `home.png` | Home / popular movies |
-| `search.png` | Search results |
-| `movie-details.png` | Movie detail modal |
-| `favorites.png` | Favorites with items |
+| Filename              | Screen                |
+| --------------------- | --------------------- |
+| `login.png`           | Login page            |
+| `home.png`            | Home / popular movies |
+| `search.png`          | Search results        |
+| `movie-details.png`   | Movie detail modal    |
+| `favorites.png`       | Favorites with items  |
 | `favorites-empty.png` | Empty favorites state |
 
 ---
 
 ## Routes
 
-| Path | Access | Description |
-|------|--------|-------------|
-| `/` | Public | Login (redirects to `/movies` if already authenticated) |
-| `/movies` | Protected | Home — popular movies & search |
-| `/movies/favorites` | Protected | Saved favorites |
+| Path                | Access    | Description                                             |
+| ------------------- | --------- | ------------------------------------------------------- |
+| `/`                 | Public    | Login (redirects to `/movies` if already authenticated) |
+| `/movies`           | Protected | Home — popular movies & search                          |
+| `/movies/favorites` | Protected | Saved favorites                                         |
 
 ---
 
@@ -289,11 +295,11 @@ Use the credentials from your `.env` file after starting the dev server.
 
 BingeBox uses the [TMDB API v3](https://developer.themoviedb.org/docs). Implemented in `backend/src/services/api.js`:
 
-| Function | TMDB endpoint | Purpose |
-|----------|---------------|---------|
-| `getPopularMovies()` | `GET /movie/popular` | Home page grid |
-| `searchMovies(query)` | `GET /search/movie` | Search bar |
-| `getMovieDetails(id)` | `GET /movie/{id}?append_to_response=credits` | Detail modal |
+| Function              | TMDB endpoint                                | Purpose        |
+| --------------------- | -------------------------------------------- | -------------- |
+| `getPopularMovies()`  | `GET /movie/popular`                         | Home page grid |
+| `searchMovies(query)` | `GET /search/movie`                          | Search bar     |
+| `getMovieDetails(id)` | `GET /movie/{id}?append_to_response=credits` | Detail modal   |
 
 Movie images are served from `https://image.tmdb.org/t/p/`.
 
@@ -303,12 +309,12 @@ Movie images are served from `https://image.tmdb.org/t/p/`.
 
 Run from the **project root** (`login-page/`):
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start Vite dev server with HMR |
-| `npm run build` | Production build → `frontend/dist/` |
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start Vite dev server with HMR       |
+| `npm run build`   | Production build → `frontend/dist/`  |
 | `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint on the frontend |
+| `npm run lint`    | Run ESLint on the frontend           |
 
 ---
 
@@ -323,23 +329,23 @@ Run from the **project root** (`login-page/`):
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| `Missing required environment variable` | Copy `.env.example` to `.env` and fill all required values |
-| Blank movie posters | Some TMDB entries have no poster; a placeholder is shown |
-| Movies not loading | Check API key, network, and TMDB rate limits |
-| Login fails | Verify `VITE_DEMO_USERNAME` and `VITE_DEMO_PASSWORD` in `.env` |
-| Screenshots broken in README | Ensure files exist under `docs/screenshots/` with exact filenames |
+| Issue                                   | Solution                                                          |
+| --------------------------------------- | ----------------------------------------------------------------- |
+| `Missing required environment variable` | Copy `.env.example` to `.env` and fill all required values        |
+| Blank movie posters                     | Some TMDB entries have no poster; a placeholder is shown          |
+| Movies not loading                      | Check API key, network, and TMDB rate limits                      |
+| Login fails                             | Verify `VITE_DEMO_USERNAME` and `VITE_DEMO_PASSWORD` in `.env`    |
+| Screenshots broken in README            | Ensure files exist under `docs/screenshots/` with exact filenames |
 
 ---
 
 ## Contributing
 
-1. Fork the repository  
-2. Create a feature branch (`git checkout -b feature/your-feature`)  
-3. Commit your changes (`git commit -m 'Add your feature'`)  
-4. Push to the branch (`git push origin feature/your-feature`)  
-5. Open a Pull Request  
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
 ---
 
@@ -351,8 +357,8 @@ This project is private. Add a license file (e.g. MIT) if you plan to open-sourc
 
 ## Acknowledgments
 
-- Movie data and images provided by [The Movie Database (TMDB)](https://www.themoviedb.org/)  
-- This product uses the TMDB API but is not endorsed or certified by TMDB  
+- Movie data and images provided by [The Movie Database (TMDB)](https://www.themoviedb.org/)
+- This product uses the TMDB API but is not endorsed or certified by TMDB
 
 ---
 
