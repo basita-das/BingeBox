@@ -1,0 +1,102 @@
+/**
+ * Home.css — Styles for the home page search form and responsive movie grid.
+ */
+/* NEO-BRUTALISM: Home / browse page */
+.home {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--nb-cream);
+}
+
+.search-form {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* NEO-BRUTALISM: Search field — yellow fill, hard border */
+.search-input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-family: var(--nb-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border: var(--nb-border);
+  border-radius: 0;
+  background-color: var(--nb-white);
+  color: var(--nb-black);
+  box-shadow: inset 3px 3px 0 rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: var(--nb-yellow);
+  box-shadow: var(--nb-shadow-sm);
+  transform: translate(-2px, -2px);
+}
+
+.search-input::placeholder {
+  text-align: center;
+  color: rgba(10, 10, 10, 0.45);
+  font-weight: 500;
+}
+
+/* NEO-BRUTALISM: Search button — red accent + shadow */
+.search-btn {
+  padding: 0.85rem 1.5rem;
+  font-family: var(--nb-font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nb-white);
+  background-color: var(--nb-red);
+  border: var(--nb-border);
+  border-radius: 0;
+  box-shadow: var(--nb-shadow-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+/* NEO-BRUTALISM: Fixed typo from .search-button — hover lift */
+.search-btn:hover {
+  background-color: var(--nb-black);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--nb-shadow);
+}
+
+.search-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--nb-shadow-press);
+}
+
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}
+
+/* NEO-BRUTALISM: Movie grid — consistent card rhythm */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}

@@ -1,0 +1,118 @@
+/**
+ * index.css — Global styles, neo-brutalism design tokens, and shared UI (welcome banner, loading, errors).
+ */
+/* NEO-BRUTALISM: Global design tokens — bold borders, offset shadows, high-contrast palette */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@700;800&display=swap");
+
+:root {
+  --nb-black: #0a0a0a;
+  --nb-white: #fafafa;
+  --nb-cream: #fff8e1;
+  --nb-yellow: #ffee00;
+  --nb-cyan: #00f5d4;
+  --nb-pink: #ff4d6d;
+  --nb-red: #e63946;
+  --nb-border: 3px solid var(--nb-black);
+  --nb-shadow: 6px 6px 0 var(--nb-black);
+  --nb-shadow-sm: 4px 4px 0 var(--nb-black);
+  --nb-shadow-press: 2px 2px 0 var(--nb-black);
+  --nb-font-display: "Syne", "Arial Black", sans-serif;
+  --nb-font-body: "DM Sans", system-ui, sans-serif;
+}
+
+/* NEO-BRUTALISM: Base reset and app-wide typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--nb-cream);
+  font-family: var(--nb-font-body);
+  color: var(--nb-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* NEO-BRUTALISM: Movie app shell — welcome banner (replaces inline styles in MainWebsite) */
+.app-welcome-banner {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-family: var(--nb-font-display);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nb-black);
+  background: var(--nb-yellow);
+  border-bottom: var(--nb-border);
+  box-shadow: var(--nb-shadow-sm);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--nb-cream);
+}
+
+/* NEO-BRUTALISM: Shared UI blocks for Home loading / errors */
+.nb-loading {
+  margin: 2rem auto;
+  padding: 2rem 3rem;
+  max-width: 28rem;
+  text-align: center;
+  font-family: var(--nb-font-display);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--nb-black);
+  background: var(--nb-cyan);
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow);
+  animation: nb-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes nb-pulse {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    box-shadow: var(--nb-shadow);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--nb-black);
+  }
+}
+
+.nb-error-message {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--nb-white);
+  background: var(--nb-red);
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-sm);
+}

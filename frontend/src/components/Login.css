@@ -1,0 +1,162 @@
+/**
+ * Login.css — Styles for the login page background, form card, inputs, and submit button.
+ */
+/* NEO-BRUTALISM: Login page — full-viewport layout with grid texture */
+.bg {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  overflow: hidden;
+  background-color: var(--nb-cyan);
+  background-image:
+    linear-gradient(var(--nb-black) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nb-black) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: center;
+}
+
+/* BingeBox marquee — moves left to right behind the login form */
+.login-bg-animation {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  pointer-events: none;
+  opacity: 0.28;
+}
+
+.login-marquee-row {
+  overflow: hidden;
+  width: 100%;
+}
+
+.login-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: bingebox-marquee-ltr var(--marquee-duration, 20s) linear infinite;
+}
+
+.login-marquee-word {
+  flex-shrink: 0;
+  padding: 0 1.5rem;
+  font-family: var(--nb-font-display);
+  font-size: clamp(2.5rem, 10vw, 5.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nb-black);
+  -webkit-text-stroke: 2px var(--nb-black);
+}
+
+@keyframes bingebox-marquee-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* NEO-BRUTALISM: Card — thick border, hard shadow, no soft radius */
+.login-form {
+  position: relative;
+  z-index: 1;
+  background-color: var(--nb-white);
+  padding: 2rem 2rem 2.25rem;
+  border: var(--nb-border);
+  border-radius: 0;
+  box-shadow: var(--nb-shadow);
+  width: 100%;
+  max-width: 380px;
+  min-height: auto;
+}
+
+.login-form h2 {
+  font-family: var(--nb-font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0 0 1.75rem;
+  padding-top: 0;
+  color: var(--nb-black);
+  line-height: 1.15;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--nb-black);
+}
+
+/* NEO-BRUTALISM: Inputs — inset brutalist fields */
+.login-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--nb-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--nb-black);
+  background-color: var(--nb-cream);
+  border: var(--nb-border);
+  border-radius: 0;
+  box-shadow: inset 3px 3px 0 rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.login-form input:focus {
+  outline: none;
+  background-color: var(--nb-yellow);
+  box-shadow: var(--nb-shadow-sm);
+  transform: translate(-2px, -2px);
+}
+
+.login-form input::placeholder {
+  text-align: center;
+  color: rgba(10, 10, 10, 0.45);
+  font-weight: 500;
+}
+
+/* NEO-BRUTALISM: Primary CTA — offset shadow + press interaction */
+.login-form button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem auto 0;
+  max-width: none;
+  padding: 0.9rem 1.25rem;
+  font-family: var(--nb-font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nb-black);
+  background-color: var(--nb-pink);
+  border: var(--nb-border);
+  border-radius: 0;
+  box-shadow: var(--nb-shadow-sm);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.login-form button:hover {
+  background-color: var(--nb-yellow);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--nb-shadow);
+}
+
+.login-form button:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--nb-shadow-press);
+}

@@ -1,0 +1,79 @@
+/**
+ * Navbar.css — Styles for the movie app top navigation bar and link buttons.
+ */
+/* NEO-BRUTALISM: Top navigation — bold bar, chunky links */
+.navbar {
+  background-color: var(--nb-pink);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--nb-border);
+  box-shadow: var(--nb-shadow-sm);
+}
+
+.navbar-brand {
+  font-family: var(--nb-font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* NEO-BRUTALISM: Nav links as pill blocks */
+.nav-link {
+  color: var(--nb-black);
+  font-family: var(--nb-font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: var(--nb-border);
+  border-radius: 0;
+  background-color: var(--nb-white);
+  box-shadow: var(--nb-shadow-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--nb-yellow);
+  color: var(--nb-black);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--nb-shadow);
+}
+
+.nav-link:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--nb-shadow-press);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+  }
+}

@@ -1,0 +1,12 @@
+/**
+ * App.css — Layout and spacing for the main content area inside the movie app.
+ */
+/* NEO-BRUTALISM: Main content area spacing */
+.main-content {
+  flex: 1;
+  padding: 1.5rem 1rem 2.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

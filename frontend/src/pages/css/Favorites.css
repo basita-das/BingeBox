@@ -1,0 +1,79 @@
+/**
+ * Favorites.css — Styles for the favorites page heading, grid, and empty state panel.
+ */
+/* NEO-BRUTALISM: Favorites page */
+.favorites {
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.favorites h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--nb-font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--nb-black);
+  /* NEO-BRUTALISM: Hard shadow type instead of soft text-shadow */
+  text-shadow: 3px 3px 0 var(--nb-yellow);
+}
+
+/* NEO-BRUTALISM: Empty state — bordered panel */
+.favorites-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: var(--nb-white);
+  color: var(--nb-black);
+  border: var(--nb-border);
+  border-radius: 0;
+  box-shadow: var(--nb-shadow);
+  margin: 2rem auto;
+  max-width: 560px;
+}
+
+.favorites-empty h2 {
+  margin-bottom: 1rem;
+  font-family: var(--nb-font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--nb-red);
+  text-shadow: none;
+}
+
+.favorites-empty p {
+  color: rgba(10, 10, 10, 0.7);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* NEO-BRUTALISM: Staggered card entrance — snappy, not soft fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(8px, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.movies-grid > * {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+}
