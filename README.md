@@ -31,8 +31,6 @@ BingeBox is a movie discovery web app with login protection, TMDB-powered browse
 
 Add your screenshots under `docs/screenshots/` and replace the placeholders below.
 
-> **Tip:** Recommended size ~1280×720 (16:9). Use PNG for UI clarity.
-
 ### Login page
 
 Animated **BingeBox** marquee on the background and neo-brutalism login form.
