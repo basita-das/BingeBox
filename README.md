@@ -29,8 +29,6 @@ BingeBox is a movie discovery web app with login protection, TMDB-powered browse
 
 ## Screenshots
 
-Add your screenshots under `docs/` and replace the placeholders below.
-
 ### Login page
 
 Animated **BingeBox** marquee on the background and neo-brutalism login form.
@@ -139,8 +137,7 @@ Shown when no movies have been favorited yet.
 login-page/
 ├── .env                    # Local secrets (gitignored)
 ├── .env.example            # Environment template
-├── docs/
-│   └── screenshots/        # README screenshots go here
+├── docs/                   # README screenshots go here
 ├── frontend/
 │   ├── index.html
 │   ├── vite.config.js
