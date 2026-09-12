@@ -8,7 +8,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Login from "./components/login";
+import Login from "./components/Login";
 import MainWebsite from "./components/MainWebsite";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { DEMO_USERNAME, DEMO_PASSWORD } from "@backend/config/env.js";
